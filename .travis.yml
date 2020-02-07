@@ -22,4 +22,4 @@ before_script:
 - tar -xzf credentials.tar.gz
 
 script: 
-- ./deploy.sh
+- bash ./deploy.sh
