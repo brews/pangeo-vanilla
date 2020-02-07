@@ -1,0 +1,24 @@
+jupyterhub:
+  singleuser:
+    cpu:
+      limit: 4
+      guarantee: 1
+    memory:
+      limit: 14G
+      guarantee: 4G
+  proxy:
+    service:
+      loadBalancerIP: 34.83.197.156
+  auth:
+    type: github
+    github:
+      callbackUrl: "https://impactlab.climate-kube.com/hub/oauth_callback"
+      org_whitelist:
+        - "ClimateImpactLab"
+    scopes:
+      - "read:user"
+    admin:
+      access: true
+      users:
+        - brews
+        - delgadom
